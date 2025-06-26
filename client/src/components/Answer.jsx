@@ -9,7 +9,7 @@ function Answer({ refresh }) {
   });
 
   useEffect(() => {
-    axios.get('http://127.0.0.1:8000/answers')
+    axios.get('https://rag-qa-kzpr.onrender.com/answers')
       .then(response => {
         const latest = response.data.answers?.[0];
         if (latest) {

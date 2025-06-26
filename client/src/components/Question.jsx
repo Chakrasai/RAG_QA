@@ -40,7 +40,7 @@ function Question({ onAnswerUpdate }) {
 
     setLoading(true);
     try {
-      await axios.post("http://127.0.0.1:8000/upload", formData, {
+      await axios.post("https://rag-qa-kzpr.onrender.com/upload", formData, {
         headers: { 'Content-Type': 'multipart/form-data' },
         timeout: 15000
       });
