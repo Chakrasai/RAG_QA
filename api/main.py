@@ -2,7 +2,6 @@ import os
 from fastapi import FastAPI, UploadFile, Form, File # type: ignore
 from fastapi.middleware.cors import CORSMiddleware # type: ignore
 from dotenv import load_dotenv # type: ignore
-from langchain.chat_models import ChatOpenAI # type: ignore
 from langchain_community.chat_models import ChatOpenAI # type: ignore
 from langchain.chains.question_answering import load_qa_chain # type: ignore
 from langchain.docstore.document import Document # type: ignore
