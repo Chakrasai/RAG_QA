@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
-import './App.css';
 import Header from './components/Header';
 import Question from './components/Question';
 import Answer from './components/Answer';
 
 function App() {
-  const [refreshCount, setRefreshCount] = useState(0);
+  const [refresh, setRefresh] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const handleAnswerUpdate = () => {
-    setRefreshCount((prev) => prev + 1);
+    setRefresh((prev) => !prev);
   };
 
   return (
@@ -16,9 +16,12 @@ function App() {
       <Header />
       <div className="flex flex-row gap-6 p-6">
         <div className="flex flex-col gap-4 w-full md:w-1/3">
-          <Question onAnswerUpdate={handleAnswerUpdate} />
+          <Question
+            onAnswerUpdate={handleAnswerUpdate}
+            setLoading={setLoading}
+          />
         </div>
-        <Answer refresh={refreshCount} />
+        <Answer refresh={refresh} loading={loading} />
       </div>
     </div>
   );

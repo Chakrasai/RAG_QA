@@ -1,5 +1,19 @@
 import React from 'react';
 
+/**
+ * Upload component allows users to upload a document by either dragging and dropping
+ * a file or clicking to select a file from their device.
+ *
+ * @component
+ *
+ * @example
+ * return (
+ *   <Upload />
+ * )
+ *
+ * @returns {JSX.Element} A styled file input section with instructions and an upload icon.
+ */
+
 function Upload() {
     
 return (
